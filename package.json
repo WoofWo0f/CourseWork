@@ -1,0 +1,25 @@
+{
+  "name": "coursework",
+  "version": "1.0.0",
+  "description": "my coursework",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel ./index.html --open",
+    "build": "parcel build ./index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WoofWo0f/CourseWork.git"
+  },
+  "author": "WoofWo0f",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/WoofWo0f/CourseWork/issues"
+  },
+  "homepage": "https://github.com/WoofWo0f/CourseWork#readme",
+  "dependencies": {
+    "parcel": "^2.8.3",
+    "sass": "^1.62.1",
+    "scss-reset": "^1.4.2"
+  }
+}
