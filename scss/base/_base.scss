@@ -14,8 +14,15 @@ body {
   margin: 0 auto;
   height: 100%;
 }
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.main {
+  flex: 1 1 auto;
+}
 section {
-  margin-top: 15vh;
+  margin-top: 10vw;
 }
 .button {
   font-weight: 900;
@@ -36,9 +43,37 @@ section {
     box-shadow: 4px 4px 30px $pink;
   }
 }
+.socialmedia {
+  &-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #c6cbcd;
+  }
+  &-icon {
+    width: 60%;
+    height: 70%;
+  }
+}
 @media (max-width: 1024px) {
   .button {
     font-size: 18px;
     line-height: 21px;
+  }
+  .socialmedia {
+    &-link {
+      width: 30px;
+      height: 30px;
+    }
+  }
+}
+@media (max-width: 500px) {
+  .socialmedia {
+    &-link {
+      width: 40px;
+      height: 40px;
+    }
   }
 }

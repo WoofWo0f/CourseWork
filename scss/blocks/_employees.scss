@@ -43,20 +43,7 @@
     gap: 6px;
   }
 }
-.socialmedia {
-  &-link {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 40px;
-    height: 40px;
-    border: 1px solid #c6cbcd;
-  }
-  &-icon {
-    width: 60%;
-    height: 70%;
-  }
-}
+
 @media (max-width: 1024px) {
   .employees {
     &-name {
@@ -72,23 +59,11 @@
       line-height: 16px;
     }
   }
-  .socialmedia {
-    &-link {
-      width: 30px;
-      height: 30px;
-    }
-  }
 }
 @media (max-width: 850px) {
   .employees {
     &-grid {
       grid-template-columns: repeat(2, 1fr);
-    }
-  }
-  .socialmedia {
-    &-link {
-      width: 40px;
-      height: 40px;
     }
   }
 }
