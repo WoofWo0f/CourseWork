@@ -36,3 +36,9 @@ section {
     box-shadow: 4px 4px 30px $pink;
   }
 }
+@media (max-width: 1024px) {
+  .button {
+    font-size: 18px;
+    line-height: 21px;
+  }
+}
