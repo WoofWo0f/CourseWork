@@ -1,25 +1,24 @@
 .slider {
   &-content {
-    padding: 0 5px;
-    max-width: 2048px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
     margin-bottom: 30px;
+    background-color: $quoteBg;
   }
   &-image {
-    flex: 1 1 40%;
-    width: 100%;
+    flex: 1 1 50%;
+    width: 50vw;
     height: auto;
   }
   &-text {
-    flex: 0 1 60%;
+    flex: 1 1 50%;
     color: $white;
     background: $quoteBg;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 10px 100px;
+    padding: 10px 150px;
     gap: 30px;
   }
   &-quote {
@@ -51,7 +50,7 @@
     }
   }
 }
-@media (max-width: 1200px) {
+@media (max-width: 1250px) {
   .slider {
     &-quote {
       font-size: 24px;
@@ -62,7 +61,7 @@
       line-height: 14px;
     }
     &-text {
-      padding: 10px 50px;
+      padding: 10px 80px;
     }
   }
 }
@@ -75,8 +74,11 @@
     }
     &-text {
       text-align: center;
-      padding: 20px 30px 100px;
+      padding: 40px 30px 100px;
       gap: 30px;
+    }
+    &-image {
+      width: 100%;
     }
   }
 }
