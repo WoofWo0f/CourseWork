@@ -1,23 +1,23 @@
 .examples {
   &-grid {
+    margin: 0 auto;
     padding: 2px;
-    max-width: 2048px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, 1fr);
+    gap: 0px;
   }
   &-item {
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     outline: 3px solid $white;
     outline-offset: -2px;
     position: relative;
-
     &:hover {
       .examples-hover {
         opacity: 1;
-        cursor: pointer;
       }
     }
     &:active {
@@ -87,7 +87,7 @@
     }
   }
 }
-@media (max-width: 600px) {
+@media (max-width: 800px) {
   .examples {
     &-grid {
       display: grid;

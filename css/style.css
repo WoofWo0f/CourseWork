@@ -289,13 +289,15 @@ section {
   }
 }
 .examples-grid {
+  margin: 0 auto;
   padding: 2px;
-  max-width: 2048px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(2, 1fr);
+  gap: 0px;
 }
 .examples-item {
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -305,7 +307,6 @@ section {
 }
 .examples-item:hover .examples-hover {
   opacity: 1;
-  cursor: pointer;
 }
 .examples-item:active .examples-active {
   opacity: 1;
@@ -370,7 +371,7 @@ section {
     line-height: 16px;
   }
 }
-@media (max-width: 600px) {
+@media (max-width: 800px) {
   .examples-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -464,5 +465,82 @@ section {
 @media (max-width: 500px) {
   .employees-grid {
     grid-template-columns: repeat(1, 1fr);
+  }
+}
+.slider-content {
+  padding: 0 5px;
+  max-width: 2048px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+.slider-image {
+  flex: 1 1 40%;
+  width: 100%;
+  height: auto;
+}
+.slider-text {
+  flex: 0 1 60%;
+  color: #ffffff;
+  background: #5c3249;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px 100px;
+  gap: 30px;
+}
+.slider-quote {
+  font-family: "Cardo";
+  font-style: italic;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 49px;
+  text-transform: capitalize;
+}
+.slider-author {
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 15px;
+  text-transform: uppercase;
+}
+.slider-control {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+.slider-button {
+  width: 14px;
+  height: 14px;
+  border: 1px solid #7e5d6f;
+  border-radius: 50%;
+}
+.slider-button:nth-child(2) {
+  background: #7e5d6f;
+}
+
+@media (max-width: 1200px) {
+  .slider-quote {
+    font-size: 24px;
+    line-height: 32px;
+  }
+  .slider-author {
+    font-size: 12px;
+    line-height: 14px;
+  }
+  .slider-text {
+    padding: 10px 50px;
+  }
+}
+@media (max-width: 850px) {
+  .slider-content {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+  }
+  .slider-text {
+    text-align: center;
+    padding: 20px 30px 100px;
+    gap: 30px;
   }
 }
