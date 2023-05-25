@@ -1,0 +1,101 @@
+.employees {
+  &-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+  }
+  &-card {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
+  &-photo {
+    width: 100%;
+    height: auto;
+  }
+  &-info {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+  }
+  &-name {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    text-transform: capitalize;
+    color: #2d3033;
+  }
+  &-position {
+    font-size: 18px;
+    line-height: 21px;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    color: $pink;
+  }
+  &-description {
+    font-size: 18px;
+    line-height: 21px;
+    color: #6c7279;
+  }
+  &-socialmedia {
+    display: flex;
+    gap: 6px;
+  }
+}
+.socialmedia {
+  &-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #c6cbcd;
+  }
+  &-icon {
+    width: 60%;
+    height: 70%;
+  }
+}
+@media (max-width: 1024px) {
+  .employees {
+    &-name {
+      font-size: 18px;
+      line-height: 21px;
+    }
+    &-position {
+      font-size: 14px;
+      line-height: 16px;
+    }
+    &-description {
+      font-size: 14px;
+      line-height: 16px;
+    }
+  }
+  .socialmedia {
+    &-link {
+      width: 30px;
+      height: 30px;
+    }
+  }
+}
+@media (max-width: 850px) {
+  .employees {
+    &-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  .socialmedia {
+    &-link {
+      width: 40px;
+      height: 40px;
+    }
+  }
+}
+@media (max-width: 500px) {
+  .employees {
+    &-grid {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}
