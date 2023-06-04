@@ -107,10 +107,6 @@ legend {
   display: block;
 }
 
-/* 
-font-family: 'Cardo', serif;
-font-family: 'Raleway', sans-serif;
-*/
 body {
   font-family: "Raleway", sans-serif;
 }
@@ -132,7 +128,7 @@ body {
 }
 
 section {
-  margin-top: 10vw;
+  margin-top: 5vw;
 }
 
 .button {
@@ -145,6 +141,7 @@ section {
   width: 30%;
   min-width: 280px;
   padding: 25px;
+  transition: all 0.4s ease;
 }
 .button:hover {
   background-color: #e71414;
@@ -194,6 +191,9 @@ section {
   min-width: 100px;
   height: auto;
 }
+.header-burger {
+  display: none;
+}
 .header-inner {
   display: flex;
   flex-direction: column;
@@ -237,13 +237,24 @@ section {
   padding: 0 10px;
   white-space: nowrap;
   border-bottom: 3px solid transparent;
+  transition: all 0.2s ease;
+  position: relative;
 }
 .header-menu-link:hover {
   border-bottom: 3px solid #babbc5;
 }
 .header-menu-link:active {
   color: #e71414;
-  border-bottom: 3px solid #e71414;
+  border-bottom: none;
+}
+.header-menu-link:active::after {
+  content: "";
+  width: 100%;
+  height: 4px;
+  bottom: -1px;
+  background: #e71414;
+  position: absolute;
+  z-index: 100;
 }
 .header-content {
   display: flex;
@@ -266,13 +277,30 @@ section {
   margin-bottom: 30px;
 }
 
+@media (max-height: 370px) {
+  .header {
+    height: 100%;
+  }
+  .header-top {
+    height: 70px;
+  }
+  .header-content {
+    margin: 15px 0;
+  }
+  .header-title {
+    font-size: 34px;
+  }
+}
 @media (max-width: 767px) {
   .header-top {
-    height: 50px;
     border: none;
   }
   .header-menu {
     display: none;
+  }
+  .header-burger {
+    display: block;
+    margin-right: 15px;
   }
 }
 .advantages-grid {
@@ -349,7 +377,6 @@ section {
 }
 .examples-item:active .examples-active {
   opacity: 1;
-  cursor: pointer;
 }
 .examples-image {
   width: 100%;
@@ -382,6 +409,7 @@ section {
   right: 0;
   opacity: 0;
   background: rgba(255, 67, 67, 0.8);
+  transition: all 0.3s ease;
 }
 .examples-active {
   position: absolute;
@@ -508,7 +536,7 @@ section {
   gap: 30px;
 }
 .slider-quote {
-  font-family: "Cardo";
+  font-family: "Cardo", serif;
   font-style: italic;
   font-weight: 400;
   font-size: 36px;

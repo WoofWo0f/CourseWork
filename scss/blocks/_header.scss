@@ -9,6 +9,9 @@
     min-width: 100px;
     height: auto;
   }
+  &-burger {
+    display: none;
+  }
   &-inner {
     display: flex;
     flex-direction: column;
@@ -51,12 +54,23 @@
       padding: 0 10px;
       white-space: nowrap;
       border-bottom: 3px solid transparent;
+      transition: all 0.2s ease;
+      position: relative;
       &:hover {
         border-bottom: 3px solid #babbc5;
       }
       &:active {
         color: $buttonHover;
-        border-bottom: 3px solid $buttonHover;
+        border-bottom: none;
+        &::after {
+          content: "";
+          width: 100%;
+          height: 4px;
+          bottom: -1px;
+          background: $buttonHover;
+          position: absolute;
+          z-index: 100;
+        }
       }
     }
   }
@@ -81,14 +95,31 @@
     margin-bottom: 30px;
   }
 }
+@media (max-height: 370px) {
+  .header {
+    height: 100%;
+    &-top {
+      height: 70px;
+    }
+    &-content {
+      margin: 15px 0;
+    }
+    &-title {
+      font-size: 34px;
+    }
+  }
+}
 @media (max-width: 767px) {
   .header {
     &-top {
-      height: 50px;
       border: none;
     }
     &-menu {
       display: none;
+    }
+    &-burger {
+      display: block;
+      margin-right: 15px;
     }
   }
 }
